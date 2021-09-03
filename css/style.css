@@ -1,0 +1,120 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap');
+
+svg {
+    width: 100px;
+    height: 100px;
+}
+
+img {
+    max-width: 100%;
+}
+
+#bell {
+    width: 20px;
+}
+
+* {
+    box-sizing: border-box;
+    font-family: 'Roboto';
+}
+
+/*grid styles*/
+
+.grid-container {
+    display: grid;
+    grid-template-columns: 100%;
+    grid-template-rows: auto;
+    grid-template-areas:
+        "header"
+        "nav"
+        "main";
+}
+
+header {
+    grid-area: header;
+}
+
+nav {
+    grid-area: nav;
+}
+
+main {
+    grid-area: main;
+    display: grid;
+}
+
+.widget-container-full,
+.widget-container-half {
+    width: 95vw;
+}
+
+header {
+    background-color: #7068c9;
+    color: #fff;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    padding-right: 10px;
+}
+
+h1 {
+    font-size: 1.85rem;
+}
+
+.bell-container {
+    margin-left: auto;
+}
+
+#bell {
+    width: 30px;
+    height: 30px;
+}
+
+#student-name {
+    font-weight: 100;
+}
+
+.profile-image {
+    border-radius: 50%;
+    width: 50px;
+    height: 50px;
+}
+
+@media (min-width: 768px) {
+    .grid-container {
+        grid-template-columns: 55px 1fr;
+        grid-template-areas:
+            "header header"
+            "nav main";
+    }
+
+    main {
+        grid-template-columns: 50%;
+    }
+
+    .traffic,
+    .social-stats {
+        grid-column: 1 / span 2;
+    }
+
+    .daily,
+    .new-members,
+    .message {
+        grid-column: 1 / span 1;
+    }
+
+    .mobile,
+    .recent-activity,
+    .settings {
+        grid-column: 2 / span 1;
+    }
+
+    .widget-container-full {
+        width: 90vw;
+    }
+
+    .widget-container-half {
+        width: 45vw;
+    }
+}
