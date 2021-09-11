@@ -10,10 +10,12 @@ body {
     margin: 0;
 }
 
+/*
 svg {
-    width: 100px;
-    height: 100px;
+    width: 50px;
+    height: 50px;
 }
+*/
 
 img {
     max-width: 100%;
@@ -46,7 +48,7 @@ nav {
 main {
     grid-area: main;
     display: grid;
-    padding-left: 1.5rem;
+    padding-left: 1rem;
 }
 
 .widget-container-full,
@@ -134,6 +136,47 @@ h1 {
     margin-left: 20px;
 }
 
+/*// might need to set the height of social container to 100% so it can show in safari smh.. lets seeee.. need a lighter color too.. */
+
+.social-card {
+    background-color: #ededed;
+    border-radius: 1rem;
+    padding-left: 10px;
+    padding-right: 10px;
+    margin-bottom: 0.5rem;
+    border: 1px solid #999696;
+}
+
+.social-image {
+    background-color: #7068c9;
+    fill: white;
+    padding: 1em;
+    border-radius: 50%;
+    display: inline-block;
+}
+
+.social-image svg {
+    fill: white;
+    width: 50px;
+    height: auto;
+}
+
+.social-text {
+    display: inline-block;
+    margin-left: 20px;
+}
+
+.platform-name {
+    color: #7068c9;
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: -30px;
+}
+
+.platform-users {
+    font-size: 2rem;
+    color: #656e6e;
+}
 
 @media (min-width: 768px) {
     .grid-container {
