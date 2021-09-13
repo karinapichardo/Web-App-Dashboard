@@ -286,6 +286,26 @@ span {
     margin-right: 1rem;
 }
 
+.toggle-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    font-size: 1.2rem;
+}
+
+.switch-light {
+    width: 120px;
+}
+
+.switch-ios.switch-light input:checked ~ span {
+    box-shadow: INSET 0 0 0 30px #7068c9;
+}
+
+.switch-ios.switch-light input:checked ~ span a {
+    border: 3px solid #d8d9db;
+    outline: none;
+}
+
 #timezone {
     margin-top: 1.5rem;
     color: #999696;
