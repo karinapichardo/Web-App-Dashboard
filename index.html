@@ -21,7 +21,7 @@
         </div>
         <div class="notifications-container"></div>
         <img class="profile-image" src="images/member-1.jpg" alt="profile picture of member">
-        <h3 id="student-name">Student Name</h3>
+        <h2 id="student-name">Student Name</h2>
     </header>
 
     <!--    side navigation bar-->
@@ -73,8 +73,6 @@
             </div>
         </section>
 
-        <hr>
-
         <!--    daily traffic / bar graph-->
         <section class="daily">
             <h3>Daily Traffic</h3>
@@ -93,8 +91,10 @@
                 <!--            element doughnut graph will attach to-->
                 <canvas id="mobile-chart"></canvas>
             </div>
+
         </section>
 
+        <hr class="section-divider">
 
         <!--        social stats-->
         <section class="social-stats">
@@ -141,7 +141,7 @@
             </div>
         </section>
 
-        <hr>
+        <hr class="section-divider">
 
         <!--  new members-->
         <section class="new-members">
@@ -154,18 +154,18 @@
                     <p>Victoria Chambers</p>
                     <a href="mailto:victoria.chambers80@example.com">victoria.chambers80@example.com</a>
                 </div>
-                <p>10/15/21</p>
+                <p class="members-date">10/15/21</p>
             </div>
 
             <hr>
 
-            <div class="members-containers">
+            <div class="members-container">
                 <img src="images/member-2.jpg" alt="male member with brown hair" class="profile-image">
                 <div class="member-info">
                     <p>Dale Byrd</p>
                     <a href="mailto:dale.bryd52@example.com">dale.bryd52@example.com</a>
                 </div>
-                <p>10/15/21</p>
+                <p class="members-date">10/15/21</p>
             </div>
 
             <hr>
@@ -176,7 +176,7 @@
                     <p>Dawn Wood</p>
                     <a href="mailto:dawn.wood16@example.com">dawn.wood16@example.com</a>
                 </div>
-                <p>10/15/21</p>
+                <p class="members-date">10/15/21</p>
             </div>
 
             <hr>
@@ -187,10 +187,12 @@
                     <p>Dan Oliver</p>
                     <a href="mailto:dan.oliver82@example.com">dan.oliver82@example.com</a>
                 </div>
-                <p>10/15/21</p>
+                <p class="members-date">10/15/21</p>
             </div>
 
         </section>
+
+        <hr class="section-divider">
 
         <!--recent activity -->
         <section class="recent-activity">
@@ -198,10 +200,10 @@
             <div class="members-container">
                 <img src="images/member-1.jpg" alt="female member with blonde hair" class="profile-image">
                 <div class="activity-info">
-                    <p>Victoria Chambers commented on WebApp's SEO Tips</p>
-                    <p>4 hours ago</p>
+                    <p>Victoria Chambers commented on <span>WebApp's SEO Tips</span></p>
+                    <p class="activity-time">4 hours ago</p>
                 </div>
-                <p>></p>
+                <div class="arrow">></div>
             </div>
 
             <hr>
@@ -209,10 +211,10 @@
             <div class="members-container">
                 <img src="images/member-2.jpg" alt="male member with brown hair" class="profile-image">
                 <div class="activity-info">
-                    <p>Dale Byrd liked the post Facebook's Changes for 2022</p>
-                    <p>5 hours ago</p>
+                    <p>Dale Byrd liked the post <span>Facebook's Changes for 2022</span></p>
+                    <p class="activity-time">5 hours ago</p>
                 </div>
-                <p>></p>
+                <div class="arrow">></div>
             </div>
 
             <hr>
@@ -220,10 +222,10 @@
             <div class="members-container">
                 <img src="images/member-3.jpg" alt="female member with brown hair" class="profile-image">
                 <div class="activity-info">
-                    <p>Dawn Wood commented on Facebook's Changes for 2022</p>
-                    <p>5 hours ago</p>
+                    <p>Dawn Wood commented on <span>Facebook's Changes for 2022</span></p>
+                    <p class="activity-time">5 hours ago</p>
                 </div>
-                <p>></p>
+                <div class="arrow">></div>
             </div>
 
             <hr>
@@ -231,12 +233,14 @@
             <div class="members-container">
                 <img src="images/member-4.jpg" alt="male member with brown hair" class="profile-image">
                 <div class="activity-info">
-                    <p>Dan Oliver posted WebApp's SEO Tips</p>
-                    <p>1 day ago</p>
+                    <p>Dan Oliver posted <span>WebApp's SEO Tips</span></p>
+                    <p class="activity-time">1 day ago</p>
                 </div>
-                <p>></p>
+                <div class="arrow">></div>
             </div>
         </section>
+
+        <hr class="section-divider">
 
         <!--   messaging -->
         <section class="message">
@@ -249,7 +253,7 @@
             </form>
         </section>
 
-        <hr>
+        <hr class="section-divider">
 
         <!--     settings -->
         <section class="settings">
@@ -302,4 +306,6 @@
     </main>
     <script type="text/javascript" src="js/app.js">
     </script>
-</body></html>
+</body>
+
+</html>
