@@ -15,10 +15,6 @@ img {
     max-width: 100%;
 }
 
-#bell {
-    width: 20px;
-}
-
 /*grid styles*/
 
 .grid-container {
@@ -228,6 +224,7 @@ hr {
 .activity-info {
     font-size: 1rem;
     text-align: center;
+    margin-right: 20px;
 }
 
 .activity-time {
