@@ -371,24 +371,82 @@ span {
         margin-bottom: 1.5rem;
     }
 
+    .traffic-nav {
+        justify-content: flex-end;
+        gap: 1.8rem;
+    }
+
     .traffic,
     .social-stats,
+    .message,
+    #settings,
     .main-header,
-    .section-divider {
+    .section-divider,
+    .desktop-divider,
+    #new-members,
+    .recent-activity {
         grid-column: 1 / span 2;
     }
 
-    .daily,
-    .new-members,
-    .message {
-        grid-column: 1 / span 1;
+    .members-container {
+        flex-direction: row;
     }
 
+    .member-info,
+    .activity-info {
+        text-align: left;
+        margin-left: 2rem;
+    }
+
+    .members-date,
+    .arrow {
+        position: absolute;
+        right: 1.5rem;
+    }
+
+    .arrow {
+        visibility: visible;
+        font-size: 1.25rem;
+    }
+
+    .switch-light {
+        position: absolute;
+        left: 280px;
+
+    }
+
+
+    .toggle-container {
+        justify-content: flex-start;
+    }
+
+    /*
+    .message,
+    #settings {
+        grid-column: 1 / span 2;
+    }
+*/
+
+    /*
+    .daily,
+    #new-members,
+    .message {
+        grid-column: 1 / span 1;
+    }*/
+
+
+    /*
+    #new-members, .recent-activity, .message, #settings {
+        
+    }
+*/
+
+    /*
     .mobile,
     .recent-activity,
-    .settings {
+    #settings {
         grid-column: 2 / span 1;
-    }
+    }*/
 
     .widget-container-full {
         width: 90vw;
@@ -396,5 +454,20 @@ span {
 
     .widget-container-half {
         width: 45vw;
+    }
+
+    .social-container {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    .section-divider {
+        display: none;
+    }
+
+    .desktop-divider {
+        margin-left: -10px;
+        width: 100%;
+        margin-top: 20px;
     }
 }
