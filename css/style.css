@@ -415,38 +415,10 @@ span {
 
     }
 
-
     .toggle-container {
         justify-content: flex-start;
     }
 
-    /*
-    .message,
-    #settings {
-        grid-column: 1 / span 2;
-    }
-*/
-
-    /*
-    .daily,
-    #new-members,
-    .message {
-        grid-column: 1 / span 1;
-    }*/
-
-
-    /*
-    #new-members, .recent-activity, .message, #settings {
-        
-    }
-*/
-
-    /*
-    .mobile,
-    .recent-activity,
-    #settings {
-        grid-column: 2 / span 1;
-    }*/
 
     .widget-container-full {
         width: 90vw;
@@ -458,7 +430,12 @@ span {
 
     .social-container {
         display: flex;
-        justify-content: space-between;
+        justify-content: center;
+        column-gap: 0.23rem;
+    }
+
+    .social-card {
+        flex: 2 1 auto;
     }
 
     .section-divider {
