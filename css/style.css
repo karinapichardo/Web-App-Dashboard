@@ -448,3 +448,27 @@ span {
         margin-top: 20px;
     }
 }
+
+@media (min-width: 1024px) {
+
+    .message,
+    #settings,
+    #new-members {
+        grid-column: 1 / span 1;
+    }
+
+    .recent-activity {
+        grid-column: 2 / span 1;
+    }
+
+    .desktop-divider {
+        display: none;
+        /*        grid-column: 1 / span 2;*/
+
+    }
+
+    .section-divider {
+        display: none;
+    }
+
+}
