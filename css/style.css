@@ -462,7 +462,7 @@ span {
     }
 
     .desktop-divider {
-        display: none;
+/*        display: none;*/
         /*        grid-column: 1 / span 2;*/
 
     }
