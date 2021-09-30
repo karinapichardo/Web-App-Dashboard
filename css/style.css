@@ -92,7 +92,7 @@ h1 {
     font-size: 0.9rem;
 }
 
-#primary-header .profile-image {
+.user-image {
     border-radius: 50%;
     width: 50px;
     height: 50px;
@@ -101,6 +101,7 @@ h1 {
 
 .profile-image {
     border-radius: 50%;
+    margin-bottom: 1rem;
 }
 
 #main-nav {
@@ -212,6 +213,7 @@ hr {
     display: flex;
     flex-direction: column;
     align-items: center;
+    position: relative;
 }
 
 .member-info {
@@ -293,6 +295,7 @@ span {
     display: flex;
     justify-content: space-between;
     align-items: center;
+    position: relative;
 }
 
 .toggle-container p {
@@ -313,7 +316,7 @@ span {
 }
 
 #timezone {
-    margin-top: 1.5rem;
+    margin-top: 4.2rem;
     color: #999696;
 }
 
@@ -452,21 +455,42 @@ span {
 @media (min-width: 1024px) {
 
     .message,
-    #settings,
     #new-members {
         grid-column: 1 / span 1;
     }
 
+    #settings {
+        grid-column: 2 / span 1;
+        padding-left: 1rem;
+    }
+
     .recent-activity {
         grid-column: 2 / span 1;
+        padding-left: 1rem;
     }
 
-    .desktop-divider {
-/*        display: none;*/
-        /*        grid-column: 1 / span 2;*/
-
+    .social-stats {
+        padding-bottom: 3rem;
     }
 
+    .message,
+    #settings,
+    #new-members,
+    .recent-activity,
+    .social-stats,
+    .daily,
+    .mobile {
+        border-top: 1px solid #999696;
+        padding-top: 1rem;
+        margin-top: -30px;
+    }
+
+    .message,
+    #new-members {
+        border-right: 1px solid #999696;
+    }
+
+    .desktop-divider,
     .section-divider {
         display: none;
     }
