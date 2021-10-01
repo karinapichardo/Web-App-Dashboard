@@ -132,6 +132,26 @@ h1 {
     margin-left: 20px;
 }
 
+.alert {
+    height: 100%;
+}
+
+.alert-banner {
+    background-color: #7068c9;
+    color: #fff;
+    margin-top: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    border-radius: 5px;
+    display: flex;
+    justify-content: space-between;
+    width: 100%;
+}
+
+.alert-banner-close {
+    cursor: pointer;
+}
+
 .traffic-header {
     padding-top: 1.5rem;
 }
