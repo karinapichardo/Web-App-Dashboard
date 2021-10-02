@@ -1,12 +1,46 @@
-const alertBanner = document.getElementById('alert');
+const alertIcon = document.querySelector('#bell');
+const alertBanner = document.querySelector('.alert');
+const notification1 = document.getElementById('alert2');
+const notification2 = document.getElementById('alert3');
 const trafficCanvas = document.getElementById('traffic-chart');
 const dailyCanvas = document.getElementById('daily-chart');
 const mobileCanvas = document.getElementById('mobile-chart');
 
+
+alertIcon.addEventListener('click', e => {
+    notification1.innerHTML =
+        `
+    <div class="alert-banner">
+     <p><strong>Karina Pichardo</strong> sent you a friend request</p>
+     <p class="alert-banner-close">x</p>
+    </div>
+    `
+    notification2.innerHTML =
+        `
+    <div class="alert-banner">
+     <p><strong>Dan Oliver</strong> sent you an invitation to Boston's yearly tech conference</p>
+     <p class="alert-banner-close">x</p>
+    </div>
+    `
+})
+
+notification1.addEventListener('click', e => {
+    const element = e.target;
+    if (element.classList.contains('alert-banner-close')) {
+        notification1.style.display = 'none';
+    }
+})
+
+notification2.addEventListener('click', e => {
+    const element = e.target;
+    if (element.classList.contains('alert-banner-close')) {
+        notification2.style.display = 'none';
+    }
+})
 alertBanner.innerHTML =
     `
     <div class="alert-banner">
-     <p><strong>Alert:</strong> You have <strong>6</strong> overdue tasks to complete</p>
+     <p><strong>Alert:</strong> You have <strong>unread</strong> messages</p>
      <p class="alert-banner-close">x</p>
     </div>
     `
