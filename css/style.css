@@ -443,8 +443,13 @@ span {
     }
 
     .traffic-nav {
+        margin-right: 2.5rem;
         justify-content: flex-end;
-        gap: 1.8rem;
+    }
+
+    .traffic-nav-link {
+        margin-left: 1.8rem;
+        cursor: pointer;
     }
 
     .daily {
@@ -531,11 +536,11 @@ span {
     .social-container {
         display: flex;
         justify-content: center;
-        column-gap: 0.23rem;
     }
 
     .social-card {
         flex: 2 1 auto;
+        margin-left: 0.6rem;
     }
 
     .section-divider {
