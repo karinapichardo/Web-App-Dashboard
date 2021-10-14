@@ -11,7 +11,8 @@ body {
     overflow-x: hidden;
 }
 
-img {
+img,
+canvas {
     max-width: 100%;
 }
 
@@ -216,8 +217,18 @@ h3 {
 }
 
 .traffic-nav-link {
+    padding: 0.8rem;
     list-style: none;
     font-size: 1.1rem;
+    text-align: center;
+    height: 45px;
+    width: 80px;
+}
+
+.active {
+    background-color: #78CF82;
+    color: #fff;
+    border-radius: 45px;
 }
 
 .social-stats {
@@ -463,18 +474,12 @@ span {
     .daily,
     .mobile {
         margin-top: -20px;
-        margin-bottom: -20px;
+        padding-bottom: 2rem;
     }
 
     .daily h3,
     .mobile h3 {
         padding-top: 1rem;
-    }
-
-    #daily-chart {
-        margin-top: 35%;
-        height: 345px;
-        width: 345.5px;
     }
 
     canvas {
