@@ -6,6 +6,20 @@ const trafficCanvas = document.getElementById('traffic-chart');
 const dailyCanvas = document.getElementById('daily-chart');
 const mobileCanvas = document.getElementById('mobile-chart');
 
+//const hourlyBtn = document.getElementById('hourly');
+//const dailyBtn = document.getElementById('daily');
+//const weeklyBtn = document.getElementById('weekly');
+//const monthlyBtn = document.getElementById('monthly');
+
+
+const listItem = document.querySelectorAll('.traffic-nav-link');
+
+listItem.forEach(item => {
+    item.addEventListener('click', function () {
+        listItem.forEach(navItem => navItem.classList.remove('active'));
+        this.classList.add('active');
+    })
+})
 
 alertIcon.addEventListener('click', e => {
     notification1.innerHTML =
@@ -132,6 +146,7 @@ const mobileData = {
 };
 
 const mobileOptions = {
+    aspectRatio: 1.9,
     plugins: {
         legend: {
             position: 'right',
