@@ -469,12 +469,12 @@ span {
 
     .mobile {
         padding-left: 10px;
+        padding-bottom: 1rem;
     }
 
     .daily,
     .mobile {
         margin-top: -20px;
-        padding-bottom: 2rem;
     }
 
     .daily h3,
