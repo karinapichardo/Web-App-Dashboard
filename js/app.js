@@ -6,21 +6,6 @@ const trafficCanvas = document.getElementById('traffic-chart');
 const dailyCanvas = document.getElementById('daily-chart');
 const mobileCanvas = document.getElementById('mobile-chart');
 
-//const hourlyBtn = document.getElementById('hourly');
-//const dailyBtn = document.getElementById('daily');
-//const weeklyBtn = document.getElementById('weekly');
-//const monthlyBtn = document.getElementById('monthly');
-
-
-const listItem = document.querySelectorAll('.traffic-nav-link');
-
-listItem.forEach(item => {
-    item.addEventListener('click', function () {
-        listItem.forEach(navItem => navItem.classList.remove('active'));
-        this.classList.add('active');
-    })
-})
-
 alertIcon.addEventListener('click', e => {
     notification1.innerHTML =
         `
@@ -64,6 +49,41 @@ alertBanner.addEventListener('click', e => {
     if (element.classList.contains('alert-banner-close')) {
         alertBanner.style.display = 'none';
     }
+})
+
+const updateChart = (chart, newData) => {
+    chart.data.labels = newData.labels;
+    chart.data.datasets[0].data = newData.datasets[0].data;
+    chart.update({
+        tension: 0.3,
+        aspectRatio: 2.5,
+        animation: {
+            duration: 0
+        },
+    });
+}
+
+const listItem = document.querySelectorAll('.traffic-nav-link');
+
+listItem.forEach(item => {
+    item.addEventListener('click', function () {
+        listItem.forEach(navItem => navItem.classList.remove('active'));
+        this.classList.add('active');
+
+        if (item.textContent === 'Hourly') {
+            trafficChart.data.datasets[0].data = [5, 10, 14, 4, 5, 2, 0, 12, 4, 10, 19];
+            trafficChart.update();
+        } else if (item.textContent === 'Daily') {
+            trafficChart.data.datasets[0].data = [100, 50, 70, 120, 85, 65, 70, 35, 80, 110, 90];
+            trafficChart.update();
+        } else if (item.textContent === 'Weekly') {
+            trafficChart.data.datasets[0].data = [700, 1200, 1000, 200, 1500, 1650, 1350, 1800, 2250, 1100, 2500, 2000];
+            trafficChart.update();
+        } else if (item.textContent === 'Monthly') {
+            trafficChart.data.datasets[0].data = [750, 1250, 1000, 2000, 1500, 1750, 1250, 1850, 2250, 1500, 2500];
+            trafficChart.update();
+        }
+    })
 })
 
 let trafficData = {
