@@ -5,6 +5,12 @@ const notification2 = document.getElementById('alert3');
 const trafficCanvas = document.getElementById('traffic-chart');
 const dailyCanvas = document.getElementById('daily-chart');
 const mobileCanvas = document.getElementById('mobile-chart');
+const listItem = document.querySelectorAll('.traffic-nav-link');
+const sendBtn = document.querySelector('#send');
+
+const userField = document.querySelector('#userField');
+const messageField = document.querySelector('#messageField');
+
 
 alertIcon.addEventListener('click', e => {
     notification1.innerHTML =
@@ -62,8 +68,6 @@ const updateChart = (chart, newData) => {
         },
     });
 }
-
-const listItem = document.querySelectorAll('.traffic-nav-link');
 
 listItem.forEach(item => {
     item.addEventListener('click', function () {
@@ -182,4 +186,16 @@ let mobileChart = new Chart(mobileCanvas, {
     type: 'doughnut',
     data: mobileData,
     options: mobileOptions
+});
+
+sendBtn.addEventListener('click', e => {
+    if (messageField.value.length === 0) {
+        alert('Message field is empty, please enter a message to submit.');
+        event.preventDefault();
+    } else if (userField.value.length === 0) {
+        alert('User field is empty, please enter a name.');
+        event.preventDefault();
+    } else {
+        alert('Message has been sent, thank you! ✅ ');
+    }
 });
