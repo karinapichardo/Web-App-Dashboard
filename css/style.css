@@ -469,7 +469,12 @@ span {
 
     .mobile {
         padding-left: 10px;
-        padding-bottom: 1rem;
+        margin-bottom: -40px;
+
+
+        /*        margin-bottom: 1rem;*/
+        /*        padding-bottom: 1rem;*/
+        /*        padding-right: 10px;*/
     }
 
     .daily,
@@ -579,6 +584,7 @@ span {
     .daily,
     .mobile {
         margin-bottom: 0px;
+        padding-bottom: 1rem;
     }
 
     .social-stats {
